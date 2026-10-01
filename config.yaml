@@ -1,0 +1,45 @@
+documents:
+  - doc_id: delta_domestic
+    airline: Delta Air Lines
+    doc_title: Delta Domestic General Rules Tariff (US domestic)
+    path: data/raw/delta-coc.pdf
+    source_url: https://www.delta.com/us/en/legal/contract-of-carriage-dgr
+    date_downloaded: "2026-10-02"
+    doc_revision_date: "2026-08-18"
+    heading_regex: '^RULE\s+\d+:\s*(?:\n\s*)?[A-Z][^\n]*'
+    clean_regex:
+      - 'Delta Domestic General Rules Tariff Page \d+ of \d+'
+      - '(?m)^.*\.{4,}\s*\d+\s*$'
+    toc_pages: [1]
+
+  - doc_id: air_india_coc
+    airline: Air India
+    doc_title: Air India Conditions of Carriage (domestic + international)
+    path: data/raw/air-india-coc.pdf
+    source_url: https://www.airindia.com/content/dam/air-india/pdfs/air-india-coc.pdf
+    date_downloaded: "2026-10-02"
+    doc_revision_date: "not stated"
+    heading_regex: '^(Article\s+\d+\s*[–-]\s*\S.*|\d{1,2}\.\d{1,2}\s*(?:\n\s*)?[A-Z][A-Z ,./&()’\-]+)$'
+    clean_regex:
+      - 'Air India Limited – Conditions of Carriage'
+      - '(?m)^Page \d+ of \d+\s*$'
+      - '(?m)^.*\.{4,}\s*\d+\s*$'
+    toc_pages: [1]
+
+settings:
+  chat_model: gemma3:4b
+  embed_model: nomic-embed-text
+  chunk:
+    section:
+      max_chars: 3000
+      overlap: 300
+    fixed:
+      size: 800
+      overlap: 150
+  retrieval:
+    top_k: 5
+    per_airline_k: 3
+    mode: hybrid
+    rrf_k: 60
+  min_similarity: 0.35
+  temperature: 0

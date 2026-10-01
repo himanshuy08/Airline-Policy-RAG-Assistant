@@ -1,0 +1,11 @@
+pydantic==2.11.7
+pyyaml==6.0.2
+pandas==2.2.3
+pytest==8.3.2
+PyMuPDF==1.26.0
+rank-bm25==0.2.2
+chromadb==1.0.15
+langchain-chroma==0.2.5
+langchain-ollama==0.3.2
+langchain-text-splitters==0.3.2
+streamlit==1.40.2

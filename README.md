@@ -70,3 +70,14 @@ pytest
 ## Document Scope
 
 Delta's configured tariff covers U.S. domestic travel. Air India's Conditions of Carriage cover domestic and international travel, and some terms refer to separate carrier regulations. Answers and comparisons should be interpreted within the scope of the cited document sections.
+
+## Configured Source Documents
+
+- **Delta Air Lines:** Domestic General Rules Tariff; revision date August 18, 2026; downloaded October 2, 2026.
+- **Air India:** Conditions of Carriage; no revision date stated in the downloaded document; downloaded October 2, 2026.
+
+The source PDFs are not included in this repository. Download them from the URLs in `config.yaml` and place them in `data/raw/` before ingestion.
+
+## Disclaimer
+
+This application is for informational purposes only and is not legal advice. Always check the current airline documents and applicable regulations for authoritative information.

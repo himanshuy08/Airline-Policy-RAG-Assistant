@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local source documents and generated artifacts
+data/raw/
+chroma_db/
+results/
+chroma/
+.chroma/
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs
+*.log
